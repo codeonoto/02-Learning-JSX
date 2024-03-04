@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Learning JSX</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            /* padding: 10px; */
+        }
+
+        table,
+        td,
+        img {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+
+        function App() {
+
+            let cars = [
+                { name: "BMW", avg: 10, img: "https://cdn-icons-png.flaticon.com/512/744/744465.png" },
+                { name: "Audi", avg: 12, img: "https://cdn-icons-png.flaticon.com/512/744/744465.png" },
+                { name: "Nexa", avg: 18, img: "https://cdn-icons-png.flaticon.com/512/744/744465.png" },
+            ]
+
+            return (
+                <>
+                    <h1>Cars Details</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Marks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {cars.map((car, idx) => (
+
+
+                                <tr key={idx}>
+                                    <td><img src={car.img} /></td>
+                                    <td>{car.name}</td>
+                                    <td>{car.avg}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+
+                </>
+            )
+        }
+
+        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+    </script>
+</body>
+
+</html>
