@@ -17,7 +17,7 @@
         function App() {
 
             let arr = [1, 2, 3, 4, 5]
-
+            let cars = ["BMW", "Audi", "Lambo", "Merc"]
             let obj = {
                 name: "John",
                 age: 20
@@ -27,6 +27,8 @@
                 <>
                     <h1>Arrays and Objects in JSX !</h1>
                     {arr.map((num) => <h2>{num}</h2>)}
+                    <h2>cars</h2>
+                    {cars.map((car) => <ul><li>{car}</li></ul>)}
                     <h2>{obj.name}</h2>
                 </>
             )
