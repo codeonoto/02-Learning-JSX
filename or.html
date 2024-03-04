@@ -16,10 +16,11 @@
         function App() {
 
             let loggedIn = true
+            let firstName = "SBlock"
+            let lastName = ""
             return (
                 <>
-                    <h1>Hello {loggedIn ? "Sblock" : "User"}!</h1>
-                    {loggedIn && <p>"Welcome to the Portal"</p>}
+                    <h1>Hello {loggedIn ? lastName || firstName : "User"}!</h1>
                 </>
             )
         }
