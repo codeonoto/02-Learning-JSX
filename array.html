@@ -26,9 +26,9 @@
             return (
                 <>
                     <h1>Arrays and Objects in JSX !</h1>
-                    {arr.map((num) => <h2>{num}</h2>)}
+                    {arr.map((num, idx) => <h2 key={idx}>{num}</h2>)}
                     <h2>Cars</h2>
-                    {cars.map((car) => <ul><li>{car}</li></ul>)}
+                    {cars.map((car, idx) => <li key={idx}>{car}</li>)}
                     <h2>{obj.name}</h2>
                 </>
             )
